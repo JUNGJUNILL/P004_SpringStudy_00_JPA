@@ -19,6 +19,14 @@ public class JpaMain {
         try{
             em = emf.createEntityManager();
             tx = em.getTransaction();
+            tx.begin();
+            Book book = new Book();
+            book.setName("JPA");
+            book.setAuthor("JJI");
+            System.out.println("============================");
+
+            em.persist(book);
+            System.out.println("============================");
 
             tx.commit();
 

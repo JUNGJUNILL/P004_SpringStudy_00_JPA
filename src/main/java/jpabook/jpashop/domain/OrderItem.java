@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 //연관관계의 주인
 @Entity
-public class OrderItem {
+public class OrderItem extends BaseEntity{
 
     @Id
     @GeneratedValue
